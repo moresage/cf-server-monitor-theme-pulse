@@ -326,9 +326,9 @@ function loadDisplay() {
 
 // Ping 分项（对齐官方 ping-panel）
 const PING_CARRIERS = [
+  { key: 'cm', label: '移动' },
   { key: 'ct', label: '电信' },
   { key: 'cu', label: '联通' },
-  { key: 'cm', label: '移动' },
   { key: 'bd', label: 'BGP' },
 ];
 
