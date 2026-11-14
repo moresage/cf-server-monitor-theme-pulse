@@ -35,10 +35,10 @@ import {
   updateFlagImg,
   updateOsIconImg,
   wsTimeoutDialog,
-} from '../utils.js?v=1.2.2-cm1';
-import {getServers} from '../api.js?v=1.2.2-cm1';
-import {Playback, normalizeTs} from '../playback.js?v=1.2.2-cm1';
-import {MetricSocket} from '../ws.js?v=1.2.2-cm1';
+} from '../utils.js?v=1.2.2-cm2';
+import {getServers} from '../api.js?v=1.2.2-cm2';
+import {Playback, normalizeTs} from '../playback.js?v=1.2.2-cm2';
+import {MetricSocket} from '../ws.js?v=1.2.2-cm2';
 
 const MODE_LABELS = { bar: '条形', ring: '圆环', table: '表格' };
 

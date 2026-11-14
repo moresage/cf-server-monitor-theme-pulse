@@ -8,10 +8,10 @@
 
 const THEME_VERSION = 'v1.2.2-cm2';
 
-import {el, fmtClock, serverNow, stateBlock, svg, toast} from './utils.js?v=1.2.2-cm1';
-import {getAuthToken, getConfig, saveThemeOptions} from './api.js?v=1.2.2-cm1';
-import {renderHome} from './views/home.js?v=1.2.2-cm1';
-import {renderDetail} from './views/detail.js?v=1.2.2-cm1';
+import {el, fmtClock, serverNow, stateBlock, svg, toast} from './utils.js?v=1.2.2-cm2';
+import {getAuthToken, getConfig, saveThemeOptions} from './api.js?v=1.2.2-cm2';
+import {renderHome} from './views/home.js?v=1.2.2-cm2';
+import {renderDetail} from './views/detail.js?v=1.2.2-cm2';
 
 const html = document.documentElement;
 const THEME_KEY = 'probe_color_mode';
