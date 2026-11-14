@@ -6,7 +6,7 @@
 //   mode:   "dark" | "light"   默认配色模式（用户手动切换后优先用户选择）
 //   sectionMark: false          关闭小标题（分组标题 / 趋势标题）前的 "//" 装饰
 
-const THEME_VERSION = 'v1.2.2';
+const THEME_VERSION = 'v1.2.2-cm1';
 
 import {el, fmtClock, serverNow, stateBlock, svg, toast} from './utils.js?v=1.2.2';
 import {getAuthToken, getConfig, saveThemeOptions} from './api.js?v=1.2.2';
