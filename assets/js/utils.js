@@ -215,6 +215,9 @@ export function normalizeWsTimeoutMinutes(v) {
 }
 
 export function avgPing(s) {
+  // 默认展示移动测速结果：移动数据可用时直接取移动延迟，否则回落为四网均值
+  const cm = pingState(s.ping_cm);
+  if (cm.kind === 'ok') return cm.value;
   const vals = ['ping_ct', 'ping_cu', 'ping_cm', 'ping_bd']
     .map((k) => pingState(s[k]))
     .filter((p) => p.kind === 'ok')
