@@ -433,9 +433,9 @@ export async function renderDetail(root, ctx, id) {
       d.boot_time ? `启动于 ${fmtDateTime(num(d.boot_time))}` : '');
 
     ipV4.className = `ip-badge${ipReachable(d.ip_v4) ? ' ok' : ''}`;
-    ipV4.textContent = `IPv4 ${ipReachable(d.ip_v4) ? '可达' : '不可达'}`;
+    ipV4.textContent = ipReachable(d.ip_v4) ? `IPv4 ${d.ip_v4}` : 'IPv4 不可达';
     ipV6.className = `ip-badge${ipReachable(d.ip_v6) ? ' ok' : ''}`;
-    ipV6.textContent = `IPv6 ${ipReachable(d.ip_v6) ? '可达' : '不可达'}`;
+    ipV6.textContent = ipReachable(d.ip_v6) ? `IPv6 ${d.ip_v6}` : 'IPv6 不可达';
 
     for (const c of pingCells) {
       c.ref.set(d[`ping_${c.key}`], d[`loss_${c.key}`]);
