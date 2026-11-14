@@ -594,11 +594,11 @@ function ipBadges() {
       box.textContent = '';
       let n = 0;
       if (ipReachable(d.ip_v4)) {
-        box.append(el('span', { class: 'tag-chip ip-chip', text: 'IPv4' }));
+        box.append(el('span', { class: 'tag-chip ip-chip', text: String(d.ip_v4) }));
         n += 1;
       }
       if (ipReachable(d.ip_v6)) {
-        box.append(el('span', { class: 'tag-chip ip-chip', text: 'IPv6' }));
+        box.append(el('span', { class: 'tag-chip ip-chip', text: String(d.ip_v6) }));
         n += 1;
       }
       box.style.display = n ? '' : 'none';
@@ -1105,7 +1105,8 @@ function tableRow(s) {
     hiddenChip.style.display = String(d.is_hidden) === '1' ? '' : 'none';
     dot.className = `status-dot ${online ? 'on' : 'off'}`;
     nameEl.textContent = d.name || '未命名';
-    osText.nodeValue = online ? ` ${shortOS(d.os)}` : timeAgo(d.last_updated);
+        const ipText = ipReachable(d.ip_v4) ? ` · ${d.ip_v4}` : (ipReachable(d.ip_v6) ? ` · ${d.ip_v6}` : '');
+    osText.nodeValue = online ? ` ${shortOS(d.os)}${ipText}` : timeAgo(d.last_updated);
     updateOsIconImg(osIcon, online ? d.os : null);
     updateFlagImg(regionImg, d.region);
     regionText.nodeValue = d.region ? ` ${d.region}` : '—';
